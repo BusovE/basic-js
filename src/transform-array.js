@@ -1,8 +1,7 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(arr) {
-  let result = [];
-  let pact = false;
+  let result = [], pact = false;
 
   for (let i = 0; i < arr.length; i++) {
       switch (arr[i]) {

@@ -9,11 +9,9 @@ module.exports = function repeater(str, options) {
     additionSeparator = '|'
   } = options;
 
-  let arrStr = [];
-  let arrAdd = [];
+  let arrStr = [], arrAdd = [];
 
   if (!repeatTimes) return '';
-
 
   for (let i = 0; i < repeatTimes; i++) {
     arrStr.push(str);
@@ -26,6 +24,7 @@ module.exports = function repeater(str, options) {
   let newArrStr = arrAdd.join(additionSeparator);
 
   arrStr = arrStr.map(a=> a + newArrStr);
+
   return arrStr.join(separator);
 
 };
